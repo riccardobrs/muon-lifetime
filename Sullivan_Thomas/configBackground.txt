@@ -1,0 +1,23 @@
+[Data]
+
+# LEGENDA:
+# 'detector_up' is the upper scintillator
+# 'detector_down' is the lower scintillator
+# 'threshold_up' is the threshold of the upper scintillator
+# 'voltage_up' is the voltage of the lower scintillator
+# 'G_mu_[det]' is the geometric factor when the scintillator xxx is the middle one considering cos2 distribution
+# 'G_g_[det]' is the geometric factor when the scintillator xxx is the middle one considering isotropic distribution
+# 'G_mu/g_s' is the geometric factor for a single detector with (mu) cos2 distribution or (g) an isotropic one
+
+detector_up = Minosse
+detector_down = Caronte
+threshold_up = 180
+voltage_up = 850
+G_mu_cerbero = 0.26019163344301
+G_mu_caronte = 0.31122657793127434
+G_mu_minosse = 0.31122657793127434
+G_g_cerbero = 0.37442189213132193
+G_g_caronte = 0.5248478293435758
+G_g_minosse = 0.5248478293435758
+G_mu_s = 0.3770
+G_g_s = 0.75398223686155037723103441198708

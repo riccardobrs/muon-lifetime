@@ -1,0 +1,12 @@
+Dir     Cerbero
+L       80.0
+l       30.0
+h1      3.8
+d1      7.0
+h2      1.0
+d2      7.0
+h3      3.8
+Muons   250000
+N_MC    3500
+NBin    25
+Layout  1

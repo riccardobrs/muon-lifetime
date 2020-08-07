@@ -1,0 +1,19 @@
+
+In order to test the effectiveness of the pseudo-random numbers generation, actual uniform distributions of $\left(x,y\right)$ couples have been already shown, as Figure \ref{fig:upper} and \ref{fig:lower} demonstrate. Particular attention should be given to $\theta$ distribution, since it is not trivial:
+\begin{equation}\label{eq:thetafit}
+f(\theta) = \textrm{Amp}\cdot \cos^3\theta\sin\theta
+\end{equation}
+as it has been deduced in Section \ref{sec:angdistrib}.
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=.6\linewidth]{theta}
+	\caption{Monte Carlo zenith angles distribution, fitted with \eqref{eq:thetafit}.}
+\end{figure}
+
+The accordance is satisfactory, due to the $P_{47}\left(\chi^2 \geq \chi^2_{obs}\right)\simeq 57\,\%$.
+
+
+
+\section{Code listing} \label{app:eff_geom_MC}
+\lstinputlisting[firstline=4, lastline=279]{chapters/eff_geom_MC.cpp}

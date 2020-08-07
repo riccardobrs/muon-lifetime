@@ -1,0 +1,5 @@
+Intensita' [m^(-2)*s^(-1)*sr^(-1)]:
+G con Minosse/Caronte in mezzzo: 0.5248478293435758
+Minosse: 42.850130499588495
+Caronte: 35.36474778665921
+Cerbero: 35.72386594298193

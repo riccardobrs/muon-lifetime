@@ -1,0 +1,18 @@
+Events rejected:	3082/37098
+(2 up, 1 down):		1409
+(3 up, 0 down):		548
+(1 up, 2 down):		535
+(3 up, 1 down):		266
+(4 up, 1 down):		85
+(2 up, 2 down):		72
+(4 up, 0 down):		67
+(0 up, 1 down):		33
+(1 up, 0 down):		25
+(5 up, 1 down):		16
+(1 up, 3 down):		7
+(5 up, 0 down):		6
+(3 up, 2 down):		5
+(6 up, 1 down):		4
+(4 up, 2 down):		2
+(2 up, 3 down):		1
+(7 up, 0 down):		1

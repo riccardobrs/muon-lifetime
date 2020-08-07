@@ -1,0 +1,36 @@
+\label{Background}
+
+To evaluate the expected background during the experiment there are two ways. The first one is based on the Eq. \eqref{eq:g_Rozza} and the second one on the coincidence-windows of the trigger system.
+
+In the former, starting from \eqref{eq:g_Rozza_adj} which is equivalent to \eqref{eq:g_Rozza} with some adjustments, it is possible to express the muon component $x$ of the incident radiation.
+\begin{equation}\label{eq:g_Rozza_adj}
+	\frac{R_{double}}{R_{single}} = \frac{\left(x\cdot G_t^\mu + \left(1 - x \right)\cdot G_t^\gamma \right)\varepsilon_3}{x\cdot G_s^\mu + \left(1 - x \right)\cdot G_s^\gamma}
+\end{equation}
+In this formula $\left( 1 - x\right) $ represents the background fraction, $G_s$ and $G_t$ are the geometric factor for one detectors and for the particle telescope respectively; the apices $\mu$ and $\gamma$ refer to the different angular distribution of the incoming particles, in particular the former refers to a $\cos^2\theta$-distribution while the latter to an isotropic one; $\varepsilon_3$ is the efficiency of the lower scintillator, $R_{double}$ and $R_{single}$ are the coincidence and single detector counting rate. Therefore from Eq. \eqref{eq:g_Rozza_adj} we obtain the background component as reported in Eq. \eqref{eq:back}.
+\begin{equation}\label{eq:back}
+	1 - x = 1 - \frac{R_{single}\varepsilon_3\cdot G_t^\gamma - R_{double}\cdot G_s^\gamma}{G_s^\mu - G_s^\gamma - R_{single}\varepsilon_3\left( G_t^\mu - G_t^\gamma\right)}
+\end{equation}
+Unfortunately, we were not able to proceed in this way due to an insufficient amount of data caused by the forced interruption of the laboratory activities. \\
+
+\indent The latter consists in making predictions about the expected uniform background due to random coincidences during lifetime measurements. %signals satisfying the trigger requirements. 
+The probability of having an \emph{uncorrelated stop} from a start event within the width of the coincidence gate $\Delta T  = \si{11}{\micro s}$, is
+\begin{equation}
+	P = (1 - e^{ - R_1 \Delta T}) + (1 - e^{ - R_3 \Delta T})
+\end{equation}
+where $R_1$ and $R_3$ are single-detector counting rates in the outer scintillators. Since in our case $R_1 \simeq R_3 \simeq \SI{40}{Hz}$ we have $R_i \Delta T \ll 1$, hence we can approximate as
+\begin{equation}\label{p}
+	P \simeq (R_1 + R_3 ) \cdot \Delta T
+\end{equation}
+In each bin of width $\dd T \ll \Delta T$ the probability is
+\begin{equation}
+	P_{bin} \simeq \frac{\dd P}{\dd t} \dd T = (R_1 + R_3 ) \cdot \dd T = const
+\end{equation}
+Therefore, the uniform background $B$ can be estimated as
+\begin{equation}
+	B = R_{bkg} \cdot T = P \cdot R_{start} \cdot T 
+\end{equation}
+and substituting \eqref{p} we obtain
+\begin{equation}
+	B = (R_1 + R_3 ) \cdot \Delta T \cdot R_{start} \cdot T 
+\end{equation}
+where $T$ is the run acquisition time and $R_{start}$ is the rate of START events.

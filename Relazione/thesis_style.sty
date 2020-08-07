@@ -1,0 +1,86 @@
+%---------------------------------------------------------------------------------------------------
+%This is a style file, here you include all the packages that you're going to use in your .tex file
+%Use this style file by adding "\usepackage{thesis_style}" to your .tex file
+%---------------------------------------------------------------------------------------------------
+
+\usepackage{amsmath}
+\usepackage{amssymb} % simboli matematici
+\usepackage{amsthm}
+\usepackage[english]{babel}
+\usepackage{bbold}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{braket}
+\usepackage{cancel}
+\usepackage[font={footnotesize}]{caption}
+\usepackage{chemformula}
+\usepackage{color}
+\usepackage{colortbl} 
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+%\usepackage[T1]{fontenc}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage[linktocpage]{hyperref}
+\usepackage[utf8x]{inputenc}
+\usepackage{latexsym}
+\usepackage{listings}
+\usepackage{mathtools}
+\usepackage[version=3]{mhchem}
+\usepackage{multirow}
+\usepackage{physics}
+\usepackage{pict2e}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage[font={footnotesize}]{subcaption} 
+\usepackage{tikz}
+\usepackage[compat=1.0.0]{tikz-feynman}
+\usepackage{titlesec}	% remove Chapter numbers before Chapter titles
+\usepackage{unicode}
+\usepackage{xcolor}   % colore
+\usepackage{wrapfig}
+
+
+%\captionsetup{tableposition=top,figureposition=bottom,font=small}
+%\captionsetup{format=hang,labelfont={bf,bf}}
+
+\pagestyle{plain}
+\bibliographystyle{unsrt}
+
+\hypersetup{colorlinks=false}
+
+\setlength{\textwidth}{420pt}
+\setlength{\textheight}{655pt}
+\setlength{\hoffset}{-12pt}  
+\setlength{\voffset}{-30pt}
+
+\graphicspath{ {images/} }	%where to find the images
+
+\titleformat{\chapter}[block]
+{\normalfont\bfseries\huge}
+{\thechapter}
+{20pt}
+{\Huge}  %chapter title style
+
+%\titleformat{\section}[block]
+%{\normalfont\bfseries\large}
+%{\thesection}
+%{20pt}
+%{\Large}
+
+\lstset{frame=tb,
+	language=c++,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{gray},
+	stringstyle=\color{orange},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}

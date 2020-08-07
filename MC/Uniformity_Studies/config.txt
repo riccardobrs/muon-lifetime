@@ -1,0 +1,13 @@
+Dir     CarMin_err
+L       80.0
+l       30.0
+h1      1.0
+d1      3.5
+h2      3.8
+d2      3.3
+h3      3.8
+d_err   0.5
+Muons   25000
+N_MC    3500
+NBin    25
+Layout  3

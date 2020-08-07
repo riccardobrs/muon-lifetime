@@ -1,0 +1,67 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Cosmic rays}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Free muon decay}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Muon decay in matter}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}Interaction muon-scintillator}{7}{section.1.4}
+\contentsline {section}{\numberline {1.5}Experimental equipment}{9}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Scintillators}{9}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Electronic instrumentation }{10}{subsection.1.5.2}
+\contentsline {chapter}{\numberline {2}Monte Carlo simulations}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Geometric factor}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Pseudo-random number generator}{15}{section.2.2}
+\contentsline {section}{\numberline {2.3}Aligned setup}{15}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Angular distribution}{16}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Simulation procedure}{16}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Comparison with analytical results}{18}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Uniformity studies}{20}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Simulation procedure}{21}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Uncertainty estimation}{23}{subsection.2.4.2}
+\contentsline {chapter}{\numberline {3}Instrumentation characterization}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}Electronics modules characterization}{25}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Discriminator}{25}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Delay unit}{26}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Logic unit}{29}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Coincidence unit}{33}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Digitizer}{34}{subsection.3.1.5}
+\contentsline {section}{\numberline {3.2}Scintillators characterization}{35}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Single-detector counting rates}{36}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Detection efficiency}{40}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Uniformity of light yield}{42}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Lifetime measurement}{46}{chapter.4}
+\contentsline {section}{\numberline {4.1}DAQ Trigger}{46}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Trigger system}{46}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Start}{47}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Stop}{47}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Further observations}{48}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}DAQ software}{49}{section.4.2}
+\contentsline {section}{\numberline {4.3}Preliminary studies}{50}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Preliminary lifetime measurements}{51}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Monte Carlo estimation of the expected lifetime}{55}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}High statistic lifetime measurement}{56}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Stability check}{56}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Results}{58}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}$\mu ^\pm $ lifetime estimation}{59}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Systematic errors analysis}{59}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Veto windows}{59}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Pulls analysis}{61}{subsection.4.5.2}
+\contentsline {chapter}{\numberline {A}Free muon decay}{64}{appendix.A}
+\contentsline {chapter}{\numberline {B}Monte Carlo simulations}{72}{appendix.B}
+\contentsline {section}{\numberline {B.1}Code listing}{72}{section.B.1}
+\contentsline {chapter}{\numberline {C}Technical specifications}{80}{appendix.C}
+\contentsline {section}{\numberline {C.1}Discriminator}{80}{section.C.1}
+\contentsline {section}{\numberline {C.2}Logic unit}{80}{section.C.2}
+\contentsline {section}{\numberline {C.3}Coincidence unit}{81}{section.C.3}
+\contentsline {section}{\numberline {C.4}Dual timer}{81}{section.C.4}
+\contentsline {section}{\numberline {C.5}Dual delay}{81}{section.C.5}
+\contentsline {section}{\numberline {C.6}Fan-IN Fan-OUT}{81}{section.C.6}
+\contentsline {chapter}{\numberline {D}Collected data}{82}{appendix.D}
+\contentsline {section}{\numberline {D.1}Detection efficiency}{82}{section.D.1}
+\contentsline {section}{\numberline {D.2}Logic unit characterization}{85}{section.D.2}
+\contentsline {subsection}{\numberline {D.2.1}First configuration: one scintillator}{85}{subsection.D.2.1}
+\contentsline {subsection}{\numberline {D.2.2}Second configuration: two scintillators}{85}{subsection.D.2.2}
+\contentsline {section}{\numberline {D.3}Coincidence unit characterization}{86}{section.D.3}
+\contentsline {chapter}{\numberline {E}DAQ software}{87}{appendix.E}
+\contentsline {section}{\numberline {E.1}XML parser}{87}{section.E.1}
+\contentsline {section}{\numberline {E.2}Lifetime analyzer}{91}{section.E.2}
+\contentsline {chapter}{\numberline {F}Background evaluation}{96}{appendix.F}

@@ -1,0 +1,14 @@
+[Data]
+
+# LEGENDA:
+# a1 = Lato lungo dello scintillatore 1 (metri)
+# b1 = Lato corto dello scintillatore 1 (metri)
+# a2 = Lato lungo dello scintillatore 2 (metri)
+# b2 = Lato corto dello scintillatore 2 (metri)
+# l  = Distanza tra gli scintillatori   (metri)
+
+a1 = 0.80
+b1 = 0.30
+a2 = 0.80
+b2 = 0.30
+l  = 0.08

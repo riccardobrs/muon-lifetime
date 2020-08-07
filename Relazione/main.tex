@@ -1,0 +1,119 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage{thesis_style}	%look at the style file for packages and graphics
+
+\begin{document}
+	
+	%!TeX program = lualatex
+
+\input{header}
+%\newpage\null\thispagestyle{empty}\newpage
+
+\pagenumbering{roman}
+
+\tableofcontents
+%\thispagestyle{empty}
+%\cleardoublepage
+
+%\listoffigures
+
+\chapter*{Abstract}
+\input{chapters/abstract}
+
+\chapter{Introduction}
+\label{intro}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\input{chapters/introduction}
+
+\chapter{Monte Carlo simulations}  
+\input{chapters/Sullivan}    
+\input{chapters/MC}
+
+\chapter{Instrumentation characterization}
+\input{chapters/instrumentation_characterization}
+
+\chapter{Lifetime measurement}
+\input{chapters/lifetime_measurement}
+
+\part*{Appendix}
+
+\appendix
+
+\chapter{Free muon decay}
+\label{Appendix A}
+\input{chapters/appendix_free_muon_decay}
+
+\chapter{Monte Carlo simulations}
+\label{Appendix B}
+\input{chapters/appendix_MC_simulations}
+
+\chapter{Technical specifications}
+\input{chapters/appendix_technical_specifications}
+
+\chapter{Collected data}
+\input{chapters/appendix_data}
+
+\chapter{DAQ software}
+\input{chapters/appendix_daq}
+
+\chapter{Background evaluation}
+\input{chapters/appendix_background}
+
+\newpage
+
+\begin{thebibliography}{30}
+
+
+\bibitem{PDG} M. Tanabashi \emph{et al}	(Particle Data Group), \emph{Phys. Rev.} D\textbf{98}, 030001 (2018), \texttt{DOI}: \href{http://pdg.lbl.gov/}{10.1103/PhysRevD.98.030001}.
+%http://pdg.lbl.gov/2002/pardetrpp.pdf
+%http://pdg.lbl.gov/2019/reviews/rpp2019-rev-cosmic-rays.pdf
+
+\bibitem{Longair}
+Malcom S. Longair, \emph{High Energy Astrophysics}, Cambridge University Press, Third Edition.
+
+\bibitem{Mandl Shaw}
+F. Mandl, G. Shaw, \emph{The Quantum Field Theory}, Second Edition, Wiley.
+
+\bibitem{TRandom3}
+\texttt{ROOT} Reference Documentation, \texttt{TRandom3} Class Reference, \url{https://root.cern.ch/doc/master/classTRandom3.html}.
+
+\bibitem{MT} M. Matsumoto, T. Nishimura., \emph{Mersenne Twister: A 623-Dimensionally Equidistributed Uniform Pseudo-RandomNumber Generator}, \emph{ACM Transactions on Modeling and Computer Simulation}, Vol. 8, No. 1, pp 3-30, 1998, \texttt{DOI}: \href{https://dl.acm.org/doi/pdf/10.1145/272991.272995?download=true}{10.1145/272991.272995}.
+
+\bibitem{Measday} D.F. Measday, \emph{The nuclear physics of muon capture}, Physics Reports 354, 243–409 (2001).
+
+\bibitem{Knoll} Glenn F. Knoll, \emph{Radiation Detection and Measurament}, John Wiley and Sons, Fourth Edition.
+
+\bibitem{Weissenberg} A. O. Weissenberg. \emph{Muons} North Holland Publisher.
+
+\bibitem{sutton} R.B. Sutton et al. \emph{Measurement of negative muon lifetimes in light isotopes}.
+
+	\bibitem{Sullivan}
+	J.D. Sullivan, 
+	\textit{Geometrical factor and directional response of single and multi-element particle telescopes}, 
+	Nuclear Instruments and Methods, 
+	Vol. 95, 
+	pp. 5-11, 
+	1971, 
+	\texttt{DOI}: \href{https://doi.org/10.1016/0029-554X(71)90033-4}{10.1016/0029-554X(71)90033-4}, 
+	\url{http://www.sciencedirect.com/science/article/pii/0029554X71900334}.
+	
+	\bibitem{Thomas}
+	G.R. Thomas and D.M. Willis, 
+	\textit{Analytical derivation of the geometric factor of a particle detector having circular or rectangular geometry}, 
+	Journal of Physics E: Scientific Instruments,
+	Vol. 5, 
+	pp. 260-263, 
+	1972, 
+	\texttt{DOI}: \href{https://iopscience.iop.org/article/10.1088/0022-3735/5/3/024}{10.1088/0022-3735/5/3/024}
+	\url{https://doi.org/10.1088\%2F0022-3735\%2F5\%2F3\%2F024}.
+	
+\bibitem{lifetime} T. Suzuki, D. F. Measday, J. P. Roalsvig, \emph{Total nuclear capure rates for negative muons}, Phys. Rev. C 35, 2212, 1987, \texttt{DOI}: \url{https://doi.org/10.1103/PhysRevC.35.2212}.
+
+\bibitem{charge} The CMS Collaboration, \emph{Measurement of the charge ratio of atmospheric muons with the CMS detector}, Physics Letters B, 2010, arXiv: \href{https://arxiv.org/pdf/1005.5332.pdf}{1005.5332}.
+
+\bibitem{pull} Luc Demortier, Louis Lyons,
+\emph{Everything you always wanted to know about pulls} CDF/ANAL/PUBLIC/5776 Version 2.10, August 20, 2002.
+
+\end{thebibliography}
+
+\end{document}

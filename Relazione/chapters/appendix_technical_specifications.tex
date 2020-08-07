@@ -1,0 +1,102 @@
+\section{Discriminator} \label{app:discriminator}
+CAEN N.417 8-Channel Low-Threshold Discriminator provides 2 outputs for each channel: outputs must be $\SI{50}{\ohm}$-terminated, in order to avoid undesired signal rebounds.
+
+\begin{table}[!htp]
+	\centering
+	\begin{tabular}{rl}
+		\toprule
+		Property	&	Value \\
+		\midrule
+		Threshold range	&	$1.5\textrm{-}250\,\si{mV}$ \\
+		Output 	& NIM standard\\
+		Fall-time (output)	&	$\leq \SI{1.0}{\nano\second}$\\
+		Rise-time (output)	&	$\leq \SI{1.5}{\nano\second}$\\
+		Maximum rate	&	$> \SI{10}{MHz}$\\
+		I/O delay	&	$\SI{10}{\nano\second}$\\
+		\bottomrule		
+	\end{tabular}
+	\caption{CAEN N.417 8-Channel Low-Threshold Discriminator specifications.}
+\end{table}
+
+\section{Logic unit} \label{app:logic}
+
+
+\begin{table}[!htp]
+	\centering
+	\begin{tabular}{rl}
+		\toprule
+		Property & Value 	 \\
+		\midrule
+		Minimum input width &  $\SI{5}{\nano\second} $\\
+		Input/Output	&	NIM standard \\
+		Fall-time (output)	&	$\leq \SI{2}{\nano\second}$\\
+		Rise-time (output)	&	$\leq \SI{2}{\nano\second}$\\
+		Maximum rate	&	$ \SI{100}{MHz}$\\
+		I/O delay	&	$18.0\pm\SI{0.5}{\nano\second}$\\
+		\bottomrule		
+	\end{tabular}
+	\caption{CAEN Programmable Logic Unit N81 specifications.}
+\end{table}
+
+\newpage
+
+\section{Coincidence unit} \label{app:coincidence unit}
+
+\begin{table}[!htp]
+	\centering
+	\begin{tabular}{rl}
+		\toprule
+		Property	  & Value 	 \\
+		\midrule
+		Input & Fast logic signals\\
+		Output & NIM standard\\
+		Output width & $6-\SI{600}{ns}$\\
+		Rise-time (output)	&	$\leq \SI{2}{\nano\second}$\\
+		I/O delay	&	$\SI{9.5}{\nano\second}$\\
+		\bottomrule		
+	\end{tabular}
+	\caption{LeCroy NIM Model 622 Quad 2-Fold Logic Unit specifications.}
+\end{table}
+
+
+\section{Dual timer} \label{app:Dual Timer}
+\begin{table}[!htp]
+	\centering
+	\begin{tabular}{rl}
+		\toprule
+		Property	  & Value 	 \\
+		\midrule
+		Input/Output & NIM standard\\
+		Output width & $\SI{50}{ns}-\SI{10}{s}$\\
+		Rise-time (output)	&	$\leq \SI{2}{\nano\second}$\\
+		Fall-time (output)	&	$\leq \SI{2}{\nano\second}$\\
+		I/O delay	&	$\SI{13}{\nano\second}$\\
+		\bottomrule		
+	\end{tabular}
+	\caption{CAEN Dual Timer N 93 B.}
+\end{table}
+
+
+
+\section{Dual delay} \label{app:Dual Delay}
+CAEN Dual Delay N 108 provides an I/O delay: $\SI{3.5}{\nano\second}$ to $\SI{35}{\nano\second}$.
+
+
+\section{Fan-IN Fan-OUT} \label{app:FAN IN - FAN OUT}
+\begin{table}[!htp]
+	\centering
+	\begin{tabular}{rl}
+		\toprule
+		Property	  & Value 	 \\
+		\midrule
+		Input/Output & NIM standard\\
+		Output width & logical sum of input durations\\
+		Rise-time (output)	& $\SI{2.7}{\nano\second}$\\
+		Fall-time (output)	& $\SI{3.5}{\nano\second}$\\
+		I/O delay	&	$7.0\pm\SI{0.5}{\nano\second}$\\
+		\bottomrule		
+	\end{tabular}
+	\caption{4-8 Logic Fan-IN Fan-OUT N 454.}
+\end{table}
+
+

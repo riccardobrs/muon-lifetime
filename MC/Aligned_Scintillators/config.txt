@@ -1,0 +1,7 @@
+L       80.0
+l       30.0
+zup     15.0
+zdown   0.0
+Muons   250000
+N_MC    3500
+NBin    25

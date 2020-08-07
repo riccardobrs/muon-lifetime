@@ -1,0 +1,354 @@
+In this section we apply the Intermediate Vector Boson Theory (IVB) to compute the muon lifetime.\\
+
+The muon is an unstable particle which decays into an electron, a muon neutrino and an electron antineutrino. The muon decay can be described as follows:
+
+\begin{equation} \label{16.39}
+\mu^{-} (p,r) \rightarrow e^{-} (p^', r^') + \overline \nu_{e} (q_1, r_1) + \nu_{\mu} (q_2, r_2)
+\end{equation}
+where $p$ is the four-momentum of the muon and $r$ labels its spin etc. 
+At the lowest order of perturbation theory this process is represented by the Feynman diagram in Figure \ref{feynmandiagram}.\\
+\begin{figure}[!h]
+	\centering	
+	
+	\begin{tikzpicture}
+	\begin{feynman}
+	\vertex(a) {\(  u_{\textcolor{blue}{\mu^{-}}} (p,r) \)};
+	
+	\vertex[right=3cm of a] (b);
+	\vertex[above right=1.8cm of b] (f1){\( \overline u_{\textcolor{blue}{\nu_{\mu}}} (p_{2},r_{2}) \)};
+	\vertex[below right=3cm of b] (c);
+	\vertex[above right=1.8cm of c] (f2){\( \overline u_{\textcolor{blue}{e^{-}}} (p^{'},r^{'}) \)};
+	\vertex[below right=1.8cm of c] (f3){\( v_{\textcolor{blue}{\overline \nu_{e}}}(q_{1}, r_{1}) \)};
+	
+	\diagram* {(a)-- [fermion, momentum'={[arrow style=red]\(p \)}] (b)-- [fermion, momentum'={[arrow style=red]\(q_{2}\)}] (f1),(b)-- [boson, edge label=\( i D_{F \mu \nu }(k) \), momentum'={ [arrow style=red]\(k\)}] (c),(c)-- [fermion, momentum'={[arrow style=red]\(p^{'}\)}] (f2),(c)-- [anti fermion, momentum'={[arrow style=red]\(q_{1}\)}] (f3),};
+	\end{feynman}
+	\end{tikzpicture}
+	
+	\caption{Feynman diagram for the free muon decay.}\label{feynmandiagram}
+\end{figure}
+
+\noindent According to Feynman rules for the IVB Theory we assign for each vertex a factor 
+\begin{equation}
+-i \frac{g_{W}}{\sqrt 2} \gamma^{\mu} \frac{1}{2} (1 - \gamma^5)
+\end{equation} 
+and for each internal $W$ boson line, labeled by the momentum $k$, we assign the $W$ propagator
+
+\begin{equation}
+i D_{F}^{\mu \nu} (k, m_{W}) = \frac{i ( - g^{\mu \nu} + k^{\mu}k^{\nu}/m_{W}^2)}{k^2 - m_{W}^2 + i \varepsilon } .
+\end{equation} 
+The corresponding Feynman amplitude is given by\footnote{For simplicity we neglect the spin indices.}:
+
+\begin{equation} \label{amp}
+\mathcal{M} = - \frac{g_{W}^2}{8} [ \overline{u} (\vb{p}^')  \gamma^{\mu} (1 - \gamma^5) v(\vb{q}_1)] 
+\frac{i ( - g_{\mu \nu} + k_{\mu}k_{\nu}/m_{W}^2)}{k^2 - m_{W}^2 + i \varepsilon } 
+[ \overline{u} (\vb{q}_2)  \gamma^{\nu} (1 - \gamma^5) u(\vb{p})]
+\end{equation}
+where from four-momentum conservation at each vertex we get
+
+\begin{equation}
+k = p - q_2 = p^' + q_1 .
+\end{equation}
+In the limit $m_{W} \rightarrow \infty$ (low-energy approximation) the $W^{\pm}$ propagator becomes
+
+\begin{equation}
+ \frac{i ( - g_{\mu \nu} + k_{\mu}k_{\nu}/m_{W}^2)}{k^2 - m_{W}^2 + i \varepsilon } \longrightarrow  \frac{i g_{\mu \nu} }{ m_{W}^2 }
+\end{equation} 
+and the Feynman amplitude \eqref{amp} reduces to
+
+\begin{equation} \label{amplitude}
+\mathcal{M} = - \frac{i G}{\sqrt 2 } [ \overline{u} (\vb{p}^')  \gamma^{\mu} (1 - \gamma^5) v(\vb{q}_1)] 
+[ \overline{u} (\vb{q}_2)  \gamma_{\mu} (1 - \gamma^5) u(\vb{p})]
+\end{equation}
+where G is defined by
+
+\begin{equation}
+\frac{G}{\sqrt 2} = \frac{1}{8} \left( \frac{g_{W}}{m_{W}} \right)^2 .
+\end{equation}
+For large but finite values of $m_{W}$ the amplitude \eqref{amplitude} differs from the amplitude \eqref{amp}, calculated from the IVB interaction, by terms of order $( m_{\mu} / m_W )^2$, i.e. of order $10^{-6}$. The corresponding decay rates differ by terms of the same order. Therefore we use the amplitude \eqref{amplitude} in calculating the muon decay rate.\\
+
+The general expression for the differential decay rate $\dd \Gamma$ of a particle decaying into $N$ particles is given by
+
+\begin{equation} \label{decayrate}
+\dd \Gamma = (2 \pi)^4 \delta^{(4)} \Bigl( \sum_{f} p_{f}^' - p \Bigr) \frac{1}{2E} \left( \prod_{l} 2 m_l \right) \left( \prod_{f} \frac{\dd^3 \vb{p}_{f}^{'} }{(2 \pi)^3 2E_{f}^'} \right) \abs{\mathcal{M}}^2
+\end{equation}
+where $p = (E,\vb{p})$ and $p_{f}^{'} = (E_{f}^{'},\vb{p}_{f}^{'})$ for $f = 1, \ldots N$ are the four-momenta of the initial and final particles and the index $l$ runs over all external leptons in the process.
+Therefore the differential decay rate for the muon decay is given by
+
+\begin{equation} \label{dGamma}
+d \Gamma = (2 \pi)^4 \delta^{(4)} ( p^' + q_1 + q_2 - p ) \frac{ m_{\mu} m_e m_{\overline \nu_e} m_{\nu_{\mu}}}{E} \frac{1}{(2 \pi)^9} \frac{\dd^3 \vb{p}^'}{E^'} \frac{\dd^3 \vb{q}_{1}}{E_{1}} \frac{\dd^3 \vb{q}_{2}}{E_{2}} \abs{\mathcal{M}}^2
+\end{equation}
+where $p \equiv (E, \vb{p})$, $p^' \equiv (E^', \vb{p^'})$ and $q_i \equiv (E_i, \vb{q}_i )$ with $i=1,2$.\\
+
+To obtain the total decay rate we must sum over all final spin states and integrate over all final momenta.
+Since the lifetime of the muon is independent of its spin state we also average over the spin states of the initial muon, in order to express the result as a trace\footnote{For massless neutrinos, the emitted $\overline \nu_{e}$ and $\nu_{\mu}$ have definite helicities. By summing over the helicities of these neutrinos, leaving it to the helicity projection operators in the interaction to select the appropriate helicity states, again one ensures that the result is expressed as a trace.}. Therefore we obtain the unpolarized Feynman amplitude summing over final spin states and averaging over initial spin states
+
+\begin{equation}
+\frac{1}{2} \sum_{spins} \abs{\mathcal{M}}^2 \equiv \frac{1}{2} \sum_{r} \sum_{r^',r_1, r_2} \abs{\mathcal{M}}^2
+\end{equation}
+Using the definition of the hermitian-conjugate of a spinor $\overline u (\vb{p}) = u^{\dagger} (\vb{p}) \gamma^{0}$ we can rewrite \eqref{amp} as
+
+\begin{equation} \label{ampexp}
+\mathcal{M} =  \frac{- i G}{\sqrt 2 } [ u^{\dagger}  (\vb{p}^') \gamma^{0} \gamma^{\mu} (1 - \gamma^5) v (\vb{q}_1)] 
+[ u^{\dagger}  (\vb{q}_2) \gamma^{0} \gamma_{\mu} (1 - \gamma^5) u(\vb{p})]
+\end{equation}
+From \eqref{ampexp} we compute the complex conjugate $\mathcal{M}^{\dagger}$
+\begin{equation}
+\mathcal{M}^{\dagger} =  \frac{i G}{\sqrt 2 } 
+[ v^{\dagger} (\vb{q}_1) (1 - \gamma^5)^{\dagger} (\gamma^{\mu})^{\dagger} (\gamma^{0})^{\dagger} u (\vb{p}^') ] [ u^{\dagger} (\vb{p}) (1 - \gamma^5)^{\dagger} (\gamma_{\mu})^{\dagger} (\gamma^{0})^{\dagger} u (\vb{q}_2) ] 
+\end{equation}
+From the following properties of Dirac $\gamma$-matrices 
+\begin{equation}
+\{ \gamma^{\mu}, \gamma^{\nu} \} = 2 g^{\mu \nu} \quad \mu, \nu = 0,1,2,3
+\end{equation}
+\begin{equation}
+(\gamma^{\mu})^{\dagger} = \gamma^{0} \gamma^{\mu} \gamma^{0} \quad \mu = 0,1,2,3
+\end{equation}
+\begin{equation}
+(\gamma^5)^{\dagger} = \gamma^5
+\end{equation}
+one can trivially prove that
+
+\begin{equation} \label{1}
+(\gamma^{\mu})^{2} = \mathbb{1} \quad \mu = 0,1,2,3
+\end{equation}
+\begin{equation}
+(\gamma^0)^{\dagger} = \gamma^0
+\end{equation}
+\begin{equation}
+(1 - \gamma^5)^{\dagger} = (1 - \gamma^5)
+\end{equation}
+Additionally, from the $\gamma^5$ anti-commuting property
+\begin{equation} \label{anticomm5}
+\{ \gamma^{\mu}, \gamma^5 \} = 0 \quad \mu = 0,1,2,3
+\end{equation}
+it is easy to show that
+\begin{equation} \label{change}
+(1 - \gamma^5) \gamma^{\mu} = \gamma^{\mu} (1 + \gamma^5).
+\end{equation}
+Therefore, using properties \eqref{1} and \eqref{change},  \eqref{ampexp}  can be rearranged as
+\begin{equation}
+\begin{aligned}
+\mathcal{M}^{\dagger} 
+& =  \frac{i G}{\sqrt 2 } 
+[  v^{\dagger} (\vb{q}_1) (1 - \gamma^5) \gamma^0 \gamma^{\nu} \gamma^0 \gamma^0 u (\vb{p}^') ] [  u^{\dagger} (\vb{p}) (1 - \gamma^5) \gamma^0 \gamma_{\nu} \gamma^0 \gamma^{0} u (\vb{q}_2) ] \\
+& =  \frac{i G}{\sqrt 2 } 
+[  v^{\dagger} (\vb{q}_1) (\gamma^0)^2 (1 - \gamma^5) \gamma^0 \gamma^{\nu} (\gamma^0)^2 u (\vb{p}^') ] [  u^{\dagger} (\vb{p}) (\gamma^0)^2 (1 - \gamma^5) \gamma^0 \gamma_{\nu}  (\gamma^0)^2 u (\vb{q}_2) ] \\
+& =  \frac{i G}{\sqrt 2 } 
+[ \overline v (\vb{q}_1) \gamma^0 (1 - \gamma^5) \gamma^{0} \gamma^{\nu} u (\vb{p}^') ] [ \overline u (\vb{p}) \gamma^{0} (1 - \gamma^5) \gamma^{0} \gamma_{\nu} u (\vb{q}_2) ] \\
+& = \frac{i G}{\sqrt 2 } 
+[ \overline v (\vb{q}_1) (\gamma^0)^2 (1 + \gamma^5) \gamma^{\nu} u (\vb{p}^') ] [ \overline u (\vb{p}) (\gamma^{0})^2 (1 + \gamma^5) \gamma_{\nu} u (\vb{q}_2) ] \\
+& = \frac{i G}{\sqrt 2 } [ \overline v (\vb{q}_1) \gamma^{\nu} (1 - \gamma^5)  u (\vb{p}^') ] [ \overline u (\vb{p}) \gamma_{\nu} (1 - \gamma^5)  u (\vb{q}_2) ]
+\end{aligned} 
+\end{equation}
+We now compute explicitly the unpolarized Feynman amplitude
+
+\begin{equation} \label{tr.1}
+\begin{aligned}
+\frac{1}{2} \sum_{spins} \abs{\mathcal{M}}^2 
+& = \frac{1}{2} \sum_{spins} \mathcal{M} \mathcal{M}^{\dagger} \\
+& = \frac{1}{2} \frac{G^2}{2} \sum_{r^', r_1} [ \overline{u} (\vb{p}^')  \gamma^{\mu} (1 - \gamma^5) v(\vb{q}_1)] [ \overline v (\vb{q}_1) \gamma^{\nu} (1 - \gamma^5) u (\vb{p}^') ] \\
+& \times \sum_{r, r_2} [ \overline{u} (\vb{q}_2)  \gamma_{\mu} (1 - \gamma^5) u(\vb{p})] [ \overline u (\vb{p}) \gamma_{\nu} (1 - \gamma^5) u (\vb{q}_2) ]
+\end{aligned}
+\end{equation}	
+Using the general properties of $u^{\alpha}(\vb{p},r), v^{\beta}(\vb{q},s)$ spinors with $\alpha, \beta = 1,2,3,4$
+\begin{equation}
+\sum_{r = 1}^2 [ \overline u_{\alpha} (\vb{p},r)  u^{\beta} (\vb{p},r)] = \frac{(\slashed{p} + m)_{\alpha}^{\;\;\; \beta}}{2 m}
+\end{equation}
+\begin{equation}
+\sum_{s = 1}^2 [ \overline v_{\alpha} (\vb{q},s)  v^{\beta} (\vb{q},s)] = \frac{(\slashed{q} - m)_{\alpha}^{\;\;\; \beta}}{2 m}
+\end{equation}
+\eqref{tr.1} can be rewritten as a trace
+\begin{equation} \label{trace}
+\begin{aligned}
+  \frac{1}{2} \sum_{spins} \abs{\mathcal{M}}^2
+	& = \frac{1}{2} \frac{G^2}{2} \rm{Tr} \left[ \frac{(\slashed{p^'} + m_e )}{2 m_e} \gamma^{\mu} (1 - \gamma^5) \frac{(\slashed{q}_1 - m_{\overline \nu_e} )}{2 m_{\overline \nu_e}} \gamma^{\nu} (1 - \gamma^5) \right] \\
+	& \times \rm{Tr} \left[ \frac{(\slashed{q}_2 + m_{\nu_{\mu}} )}{2 m_{\nu_{\mu}}} \gamma_{\mu} (1 - \gamma^5) \frac{(\slashed{p} + m_{\mu} )}{2m_{\mu}} \gamma_{\nu} (1 - \gamma^5) \right]
+\end{aligned}
+\end{equation}
+We now list some properties that later will be extremely useful in evaluating the trace of product of $\gamma$-matrices:
+\begin{equation} \label{tr.g1}
+\rm{Tr} ( \gamma^{\mu_1} \gamma^{\mu_2} \ldots \gamma^{\mu_{2n +1}}) = 0
+\end{equation} 
+\begin{equation} \label{tr.g2}
+\rm{Tr} ( \gamma^{\alpha} \gamma^{\beta}) = 4 g^{\alpha \beta}
+\end{equation}
+\begin{equation} \label{tr.g3}
+\rm{Tr}  ( \gamma^{\alpha} \gamma^{\beta} \gamma^{\gamma} \gamma^{\delta} ) = 4 ( g^{\alpha \beta} g^{\gamma \delta} - g^{\alpha \gamma} g^{\beta \delta} + g^{\alpha \delta} g^{\beta \gamma}) 
+\end{equation}
+\begin{equation} \label{tr.g51}
+\rm{Tr} ( \gamma^5) = \rm{Tr} ( \gamma^5 \gamma^{\alpha}) = \rm{Tr} ( \gamma^5 \gamma^{\alpha} \gamma^{\beta} ) = \rm{Tr} ( \gamma^5 \gamma^{\alpha} \gamma^{\beta} \gamma^{\gamma } ) = 0
+\end{equation}
+\begin{equation} \label{tr.g52}
+\rm{Tr} ( \gamma^5 \gamma^{\alpha} \gamma^{\beta} \gamma^{\gamma } \gamma^{\delta} ) = - 4 i \varepsilon^{\alpha \beta \gamma \delta}
+\end{equation}
+To simplify calculations we rearrange \eqref{trace} by defining
+\begin{equation}
+X \equiv m_{\mu} m_e m_{\overline \nu_e} m_{\nu_{\mu}} \frac{1}{2} \sum_{spins} \abs{\mathcal{M}}^2 .
+\end{equation}
+In the limit of massless neutrinos  ($m_{\overline \nu_{e}} \rightarrow 0$ and $m_{\nu_{\mu}} \rightarrow 0$) from \eqref{trace} we obtain
+\begin{equation}
+X = \frac{G^2}{64} \rm{Tr} \left[ (\slashed{p^'} + m_e ) \gamma^{\mu} (1 - \gamma^5) \slashed{q}_1 \gamma^{\nu} (1 - \gamma^5) \right] \rm{Tr} \left[ \slashed{q}_2 \gamma_{\mu} (1 - \gamma^5) (\slashed{p} + m_{\mu} ) \gamma_{\nu} (1 - \gamma^5) \right] 
+\end{equation}
+Using the properties of the traces of $\gamma$-matrices products in  \eqref{tr.g1}, \eqref{tr.g51} and \eqref{tr.g52} we realize that, performing all the complete products of matrices, the traces of terms proportional to masses $m_e$ and $m_{\mu}$ give vanishing contributions. Therefore we obtain
+\begin{equation} \label{this}
+X = \frac{G^2}{64} \rm{Tr} \left[ \slashed{p}^' \gamma^{\mu} (1 - \gamma^5) \slashed{q}_1 \gamma^{\nu} (1 - \gamma^5) \bigr] 
+\rm{Tr} \bigl[ \slashed{q}_2 \gamma_{\mu} (1 - \gamma^5) \slashed{p} \gamma_{\nu} (1 - \gamma^5) \right] .
+\end{equation}
+We evaluate the first trace in equation \eqref{this} i.e.
+
+\begin{equation}
+E^{\mu \nu} \equiv \rm{Tr} \bigl[ \slashed{p}^' \gamma^{\mu} (1 - \gamma^5) \slashed{q}_1 \gamma^{\nu} (1 - \gamma^5) \bigr]
+\end{equation}
+Using \eqref{anticomm5} and \eqref{change} we can perform the calculation 
+\begin{equation}
+\begin{aligned}
+E^{\mu \nu} 
+& =  p_{\alpha}^' q_{1 \beta } \rm{Tr} \bigl[ \gamma^{\alpha} \gamma^{\mu} (1 - \gamma^5) \gamma^{\beta} \gamma^{\nu} (1 - \gamma^5) \bigr] \\
+& =  p_{\alpha}^' q_{1 \beta } \rm{Tr} \bigl[ \gamma^{\alpha} \gamma^{\mu} \gamma^{\beta} (1 + \gamma^5) \gamma^{\nu} (1 - \gamma^5) \bigr] \\
+& =  p_{\alpha}^' q_{1 \beta } \rm{Tr} \bigl[ \gamma^{\alpha} \gamma^{\mu} \gamma^{\beta} \gamma^{\nu} (1 - \gamma^5)^2 \bigr] 
+\end{aligned}
+\end{equation}
+and using the identity $(1 - \gamma^5)^2 = 2 (1 - \gamma^5)$
+we finally obtain 
+\begin{equation} \label{e}
+E^{\mu \nu} = 2 p_{\alpha}^' q_{1 \beta } \rm{Tr} \bigl[ \gamma^{\alpha} \gamma^{\mu} \gamma^{\beta} \gamma^{\nu} (1 - \gamma^5) \bigr] .
+\end{equation} 
+Using \eqref{tr.g3} and \eqref{tr.g51} we obtain that \eqref{e} is equivalent to
+\begin{equation} \label{E}
+E^{\mu \nu} = 8 p^{'}_{\alpha} q_{1 \beta} x^{\alpha \mu \beta \nu}
+\end{equation}
+where
+\begin{equation} \label{16.49}
+x^{\alpha \mu \beta \nu} \equiv g^{\alpha \mu } g^{\beta \nu } - g^{\alpha \beta } g^{\mu \nu } + g^{\alpha \nu } g^{\mu \beta } + i \varepsilon^{\alpha \mu \beta \nu}
+\end{equation}
+It follows at once that the second trace in \eqref{this} is given by
+
+\begin{equation} \label{M}
+M_{\mu \nu} \equiv \rm{Tr} \bigl[ \slashed{q}_2 \gamma_{\mu} (1 - \gamma^5) \slashed{p} \gamma_{\nu} (1 - \gamma^5) \bigr] = 8 \emph{q}^{\sigma}_{2} \emph{p}^{\tau} \emph{x}_{\sigma \mu \tau \nu}
+\end{equation}
+Substituting \eqref{E} and \eqref{M} into \eqref{this} we obtain
+\begin{equation} \label{16.50}
+X = G^2 p_{\alpha}^{'} q_{1 \beta} x^{\alpha \mu \beta \nu} q_{2}^{\sigma} p^{\tau} x_{\sigma \mu \tau \nu}
+\end{equation}
+From the definition \eqref{16.49} and from the contraction identity of the Levi-Civita pseudo-tensor $\varepsilon^{\alpha \beta \gamma \delta} \varepsilon_{\alpha \beta \sigma \tau} = - 2 ( g_{\sigma}^{\gamma} g_{\tau}^{\delta} - g_{\tau}^{\gamma} g_{\sigma}^{\delta} )$ it follows that
+\begin{equation}
+x^{\alpha \mu \beta \nu} x_{\sigma \mu \tau \nu} = 4 g_{\sigma}^{\alpha} g_{\tau}^{\beta}
+\end{equation}
+%In fact if we perform the complete calculation we have
+%\begin{equation}
+%\begin{aligned}
+%x^{\alpha \mu \beta \nu} x_{\sigma \mu \tau \nu} 
+%& =  \bigl( g^{\alpha \mu } g^{\beta \nu } - g^{\alpha \beta } g^{\mu \nu } + g^{\alpha \nu } g^{\mu \beta } + i \varepsilon^{\alpha \mu \beta \nu} \bigr) x_{\sigma \mu \tau \nu} \\
+%& = calcoli
+%\end{aligned}
+%\end{equation}
+By means of this relation, \eqref{16.50} reduces to our final result for the spin sum
+
+\begin{equation} \label{16.52}
+m_{\mu} m_e m_{\overline \nu_e} m_{\nu_{\mu}} \frac{1}{2} \sum_{spins} \abs{\mathcal{M}}^2 = 4 G^2 (p q_1) (p^' q_2)
+\end{equation}
+in the limit where $m_{\overline \nu_{e}} \rightarrow 0$ and $m_{\nu_{\mu}} \rightarrow 0$.
+Combining \eqref{dGamma} and \eqref{16.52} we obtain the unpolarized differential decay rate
+
+\begin{equation} \label{16.53}
+\dd \Gamma = \frac{4 G^2}{(2 \pi)^5 E} (p q_1) (p^' q_2) \delta^{(4)} ( p^' + q_1 + q_2 - p ) \frac{\dd^3 \vb{p}^'}{E^'} \frac{\dd^3 \vb{q}_{1}}{E_{1}} \frac{\dd^3 \vb{q}_{2}}{E_{2}}
+\end{equation}
+We carry out the phase space integration, starting from integrals over the neutrino momenta, given by
+
+\begin{equation} \label{16.54}
+I^{\alpha \beta} \equiv \int \dd^3 \vb{q}_{1} \dd^3 \vb{q}_{2} \frac{q_{1}^{\alpha} q_{2}^{\beta} }{E_1 E_2} \delta^{(4)} ( q_1 + q_2 - q )
+\end{equation}
+where we define
+\begin{equation} \label{16.55}
+q \equiv p - p^'
+\end{equation}
+It follows from the Lorentz covariance of the integral \eqref{16.54} that its most general form is
+\begin{equation} \label{16.56}
+I^{\alpha \beta} = g^{\alpha \beta} A (q^2) + q^{\alpha} q^{\beta} B(q^2)
+\end{equation}
+From this equation it follows that 
+
+\begin{eqnarray} \label{16.57}
+g_{\alpha \beta} I^{\alpha \beta} = 4 A (q^2) + q^2 B(q^2) \\
+q_{\alpha} q_{ \beta} I^{\alpha \beta} = q^2 A (q^2) + (q^2)^2 B(q^2)
+\end{eqnarray}
+From now we shall consider the neutrino masses equal to zero so that  $q_1^2 = q_2^2 = 0 $ and, on account of the $\delta$-function in \eqref{16.54}
+\begin{equation} \label{16.58}
+q^2 = 2 (q_1 q_2)
+\end{equation}
+In order to find $A(q^2)$ and $B(q^2)$ we calculate the expressions of the left-hand sides of \eqref{16.57}. From \eqref{16.54} and \eqref{16.58} we obtain
+
+\begin{equation} \label{16.59}
+g_{\alpha \beta} I^{\alpha \beta} = (q_1 q_2) \int \frac{\dd^3 \vb{q}_{1}}{E_{1}} \frac{\dd^3 \vb{q}_{2}}{E_{2}} \delta^{(4)} ( q_1 + q_2 - q ) \equiv \frac{1}{2} q^2 I(q^2)
+\end{equation}
+Since the integral $I(q^2)$ is an invariant it can be evaluated in any coordinates reference frame. Therefore we choose the center-of-mass frame of the two neutrinos. In this system $\vb{q}_1 = -\vb{q}_2$, hence $\vb{q} = 0$, and the energy $\omega$ of either neutrinos is given by
+\begin{equation} \label{16.60}
+\omega \equiv E_1 = \abs{\vb{q}_1} =  E_2 = \abs{\vb{q}_2} .
+\end{equation} 
+Since the integral $I(q^2)$ can be rewritten as
+\begin{equation}
+I(q^2) = \int \frac{\dd^3 \vb{q}_{1}}{\omega} \frac{\dd^3 \vb{q}_{2}}{\omega} \delta(2 \omega - q_0) \delta^{(3)}(\vb{q}_{1} + \vb{q}_{2}) .
+\end{equation}
+Integrating the $\delta^{(3)}$-function in $\dd^3 \vb{q}_2$ we obtain
+\begin{equation} \label{16.61}
+I(q^2) =  \int \dd^3 \vb{q}_1 \frac{\delta(2 \omega - q_0)}{\omega^2} .
+\end{equation}
+We can compute $I(q^2)$ integrating in spherical-coordinates $\dd^3 \vb{q}_1 = \abs{\vb{q}_1}^2 \dd \abs{\vb{q}_1} \dd \Omega_1$, and since $\omega = \abs{\vb{q}_1}$ we can rewrite $\dd^3 \vb{q}_1 = \omega^2 \dd \omega \dd \Omega_1$. Performing the integral\footnote{Remember that $\int \dd x \delta(x-y) = 1$ and  $ \delta(a x) = \delta (x) / \abs{a}$.} we have 
+\begin{equation}
+I(q^2) = \int \dd \omega \delta( 2 \omega - q_0) \int \dd \Omega_1 = \frac{1}{2} 4 \pi =  2 \pi .
+\end{equation}
+and from \eqref{16.59} we get
+\begin{equation} \label{16.62aa}
+g_{\alpha \beta} I^{\alpha \beta}(q) = \pi q^2 .
+\end{equation}
+Similarly from \eqref{16.54}, \eqref{16.58} and \eqref{16.61}  we find
+\begin{equation} \label{16.62bb}
+q_{\alpha} q_{\beta} I^{\alpha \beta}(q^2) = \left( \frac{1}{2} q^2 \right)^2 I = \frac{1}{2} \pi (q^2)^2 .
+\end{equation}
+From \eqref{16.57}, \eqref{16.62aa} and \eqref{16.62bb} we can find $A(q^2)$ and $B(q^2)$ and substituting these ones into \eqref{16.56} we obtain
+\begin{equation} \label{16.63}
+I^{\alpha \beta}(q) = \frac{1}{6} \pi (g^{\alpha \beta} q^2 + 2 q^{\alpha} q^{\beta} ) .
+\end{equation}
+From \eqref{16.63} and \eqref{16.53} we obtain the muon decay rate for emission of an electron with momentum in the range $\dd^3 \vb{p}^'$ at $\vb{p}^'$
+
+\begin{equation} \label{16.64}
+\dd \Gamma = \frac{2 \pi}{3 } \frac{G^2}{(2 \pi)^5 E} \frac{\dd^3 \vb{p}^'}{E^'} [(p p^')q^2 + 2 (p q) (p^' q)] .
+\end{equation}
+Finally we must integrate \eqref{16.64} over all momenta $\vb{p}^'$ of the emitted electron. For a muon at rest, i.e. in the rest frame of the muon, we have
+\begin{equation} \label{16.65} 
+p = (m_{\mu},0), \qquad q_0 = m_{\mu} - E^', \qquad \vb{q} = - \vb{p}^',
+\end{equation}
+and in this frame \eqref{16.64} becomes
+\begin{equation} \label{16.66}
+\dd \Gamma = \frac{2 \pi}{3 } \frac{G^2}{(2 \pi)^5 m_{\mu}} \abs{\vb{p}^'} \dd E^' \dd \Omega^' \bigl[ m_{\mu} E^' ( m_{\mu}^2 +  m_{e}^2 - 2  m_{\mu} E^' )  + 2  m_{\mu} ( m_{\mu} - E^' ) ( m_{\mu} E^' - m_{e}^2 )	\bigr]
+\end{equation}
+where we put $\dd^3 \vb{p}^' = \abs{\vb{p}^'} E^' \dd E^' \dd \Omega^' = ({E^{'}}^2 - m_{e}^2 )^{\frac{1}{2}} E^' \dd E^' \dd \Omega^'$ \footnote{Here we use $\abs{\vb{p}^'} \dd \abs{\vb{p}^'} = E^' \dd E^'$ since $\dd E^' = \dd (\abs{\vb{p}^'}^2 + m_e^2)^{1/2} = \abs{\vb{p}^'} \dd \abs{\vb{p}^'} / E^'$.}.\\\\
+Since $m_{\mu} \simeq 207 m_e$ we can neglect terms of order $\mathcal{O} (m_{e}^2 / m_{\mu}^2)$ and \eqref{16.66} reduces to
+\begin{equation} \label{16.67}
+\dd \Gamma = \frac{2 \pi}{3 } \frac{G^2}{(2 \pi)^5} m_{\mu} {E^'}^{2} ( 3 m_{\mu} - 4 E^' ) \dd E^' \dd \Omega^' 
+\end{equation}
+Integrating \eqref{16.67} over all directions $\Omega^'$ of the emitted electron we obtain
+\begin{equation} \label{u}
+\dd \Gamma = \frac{2}{3} \frac{G^2}{(2 \pi)^3} m_{\mu} {E^'}^{2} ( 3 m_{\mu} - 4 E^' ) \dd E^' .
+\end{equation}
+From this we get the energy distribution of the emitted electron
+\begin{equation}
+\frac{\dd \Gamma}{\dd E^'} = \frac{2 G^2}{(2 \pi)^3} m_{\mu}^2 {E^'}^2\left(1 - \frac{4 E^'}{3 m_{\mu}} \right)
+\end{equation}
+To figure out the most probable electron energy we simply take the derivative of $\dd \Gamma / \dd E^'$ and set it equal to zero. This is also the maximum energy. 
+\begin{equation}
+\frac{\dd \Gamma}{\dd E^'} = 0 \quad \Rightarrow \quad E_{max}^{'} = \frac{m_{\mu}}{2}
+\end{equation}
+%Note that the energy distribution at hand does not set the maximum energy of theelectron; that is an external constraint set by the delta function which was required by conservation of energy.  
+Therefore integrating over its complete range of energies $0 \leq E^' \leq \frac{m_{\mu}}{2}$ we obtain
+\begin{equation} \label{q}
+\Gamma = \frac{2}{3} \frac{ G^2 m_{\mu} }{ (2 \pi)^3}  \int_{0}^{\frac{m_{\mu}}{2}} \dd E^'  {E^'}^2\left(3 m_{\mu} - 4 E^' \right) = \frac{G^2 m_{\mu}^5}{192 \pi^3}
+\end{equation}
+Therefore the total decay rate is given by
+\begin{equation} \label{16.68}
+\Gamma = \frac{G^2 m_{\mu}^5}{192 \pi^3}
+\end{equation}
+Considering only the leading decay mode $\mu^- \rightarrow e^- + \overline \nu_{e} + \nu_{\mu}$ we finally obtain the muon lifetime
+\begin{equation} \label{16.69}
+\tau_{\mu} = \frac{1}{\Gamma} = \frac{192 \pi^3}{G^2 m_{\mu}^5}.
+\end{equation}

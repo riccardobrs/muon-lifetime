@@ -1,0 +1,23 @@
+INTERPOLAZIONE
+
+Matrice di covarianza 
+
+f_0    2.24479e-05      -0.013893   -0.000159074
+k      -0.013893        95.8379       0.976515
+t_0   -0.000159074       0.976515      0.0126096
+
+Matrice di correlazione 
+            f_0              k            t_0
+f_0              1      -0.299529      -0.298993
+k      -0.299529              1       0.888301
+t_0      -0.298993       0.888301              1
+
+VALORI RESTITUITI DA ROOT
+Gradi di libertà = 8
+Chi2 = 0.668707
+Reduced Chi2 = 0.0835884
+p-value = 0.999601
+** STIMA PARAMETRI**
+f_0 = 0.994671 +- 0.00473792
+k = 20.9359 +- 9.78969
+t_0 = 38.0999 +- 0.112292
