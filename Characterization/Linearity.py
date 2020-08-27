@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-from future.moves import tkinter
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from numpy import *
