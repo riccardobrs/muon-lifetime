@@ -64,7 +64,7 @@ def plot3D(WorkDir1, WorkDir2, DetName):
     dx_.fill(50)
     dy_.fill(10)
 
-    final_dict = {'x': x_,
+    final_dict = {'v': x_,
                   'y': y_,
                   'z': z_,
                   'dx': dx_,
@@ -83,7 +83,7 @@ def mkPlot3D(d, ax, ax1):
     normed_cbar = colors.Normalize(dz_normed.min(), dz_normed.max())
     color = cm.jet(normed_cbar(dz_normed))
 
-    ax.bar3d(d['x'], d['y'], d['z'], d['dx'], d['dy'], d['dz'], shade=True, color=color)
+    ax.bar3d(d['v'], d['y'], d['z'], d['dx'], d['dy'], d['dz'], shade=True, color=color)
     # ax.set_title('3D Plot')
     ax.set_xlabel('Voltage (V)')
     ax.set_ylabel('Threshold (mV)')

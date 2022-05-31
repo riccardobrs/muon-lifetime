@@ -93,7 +93,7 @@ def events_partition (inputpath, rate):
 def makePlot (data, histo_name, NBin, xmin, xmax, fit_option, fit_min, fit_max, path):
     
     histo = ROOT.TH1D(histo_name, '', NBin, xmin, xmax)
-    fit_f = ROOT.TF1('fit_f', '[0]*exp(-x/[1]) + [2]', xmin, xmax)
+    fit_f = ROOT.TF1('fit_f', '[0]*exp(-v/[1]) + [2]', xmin, xmax)
     
     histo.GetXaxis().SetTitle('#Deltat [#mus]')
     histo.GetYaxis().SetTitle('Counts')

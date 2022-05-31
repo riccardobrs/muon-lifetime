@@ -35,7 +35,7 @@ def DictFromArrayEfficiency(WorkDir, DetName):
             for line in fd:
                 if not line.startswith('#'):
                     values = [float(s) for s in line.split()]
-                    xDict['X{0}.{1}'.format(i, j)] = values[0]  # It's storing the x values in a dictionary
+                    xDict['X{0}.{1}'.format(i, j)] = values[0]  # It's storing the v values in a dictionary
                     yDict['Y{0}.{1}'.format(i, j)] = values[2] / values[3]  # It's storing the y values in a dictionary
                     eff = values[2] / values[3]  # It's calculating the err_y and after it'll store in a dictionary
                     err_yDict['eY{0}.{1}'.format(i, j)] = sqrt(eff * (1 - eff) / values[3])
@@ -58,7 +58,7 @@ def DictFromArrayEfficiency(WorkDir, DetName):
 
     for k in range(l + 1):
         if 0 < k <= l:
-            FinalDict_x['x{0}'.format(k)] = x_tot[sum(f_l[:k - 1]):sum(f_l[:k])]
+            FinalDict_x['v{0}'.format(k)] = x_tot[sum(f_l[:k - 1]):sum(f_l[:k])]
             FinalDict_y['y{0}'.format(k)] = y_tot[sum(f_l[:k - 1]):sum(f_l[:k])]
             FinalDict_err_y['e_y{0}'.format(k)] = err_y_tot[sum(f_l[:k - 1]):sum(f_l[:k])]
     # It stores every dictionary in a final dictionary
@@ -98,7 +98,7 @@ def DictFromArrayThreshold(WorkDir, DetName):
 
     for k in range(l + 1):
         if 0 < k <= l:
-            FinalDict_x['x{0}'.format(k)] = x_tot[sum(f_l[:k - 1]):sum(f_l[:k])]
+            FinalDict_x['v{0}'.format(k)] = x_tot[sum(f_l[:k - 1]):sum(f_l[:k])]
             FinalDict_y['y{0}'.format(k)] = y_tot[sum(f_l[:k - 1]):sum(f_l[:k])]
             FinalDict_err_y['e_y{0}'.format(k)] = err_y_tot[sum(f_l[:k - 1]):sum(f_l[:k])]
     FD = {'0': FinalDict_x,
@@ -139,7 +139,7 @@ def DictFromArrayVoltage(WorkDir, DetName):
 
     for k in range(l + 1):
         if 0 < k <= l:
-            FinalDict_x['x{0}'.format(k)] = x_tot[sum(f_l[:k - 1]):sum(f_l[:k])]
+            FinalDict_x['v{0}'.format(k)] = x_tot[sum(f_l[:k - 1]):sum(f_l[:k])]
             FinalDict_y['y{0}'.format(k)] = y_tot[sum(f_l[:k - 1]):sum(f_l[:k])]
             FinalDict_err_y['e_y{0}'.format(k)] = err_y_tot[sum(f_l[:k - 1]):sum(f_l[:k])]
 
@@ -166,26 +166,26 @@ def mkSublots(WorkDir, DetName, D, ax):
                 mV[i] = mV[i][1:]
     # In this loop it fill the errorbar.
     for k in range(mk_l):
-        # check if x are correctly sorted
-        if not D['0']['x{0}'.format(k + 1)] == sorted(D['0']['x{0}'.format(k + 1)]):
+        # check if v are correctly sorted
+        if not D['0']['v{0}'.format(k + 1)] == sorted(D['0']['v{0}'.format(k + 1)]):
             sorted_xye = []
             sorting_counter = 0
-            for ns_x in D['0']['x{0}'.format(k + 1)]:
+            for ns_x in D['0']['v{0}'.format(k + 1)]:
                 couple_xye = []
                 couple_xye.append(ns_x)
                 couple_xye.append(D['1']['y{0}'.format(k + 1)][sorting_counter])
                 couple_xye.append(D['2']['e_y{0}'.format(k + 1)][sorting_counter])
                 sorted_xye.append(couple_xye)
                 sorting_counter = sorting_counter + 1
-            sorted_xye = sorted(sorted_xye, key=lambda k: k[0])  # list of couples [x,y,err] is sorted on the x value
+            sorted_xye = sorted(sorted_xye, key=lambda k: k[0])  # list of couples [v,y,err] is sorted on the v value
             sorting_counter = 0
             for s_x in sorted_xye:
-                D['0']['x{0}'.format(k + 1)][sorting_counter] = s_x[0]
+                D['0']['v{0}'.format(k + 1)][sorting_counter] = s_x[0]
                 D['1']['y{0}'.format(k + 1)][sorting_counter] = s_x[1]
                 D['2']['e_y{0}'.format(k + 1)][sorting_counter] = s_x[2]
                 sorting_counter = sorting_counter + 1
-            print('(x,y,err) with index {0} have been correctly sorted on x'.format(k))
-        ax.errorbar(D['0']['x{0}'.format(k + 1)], D['1']['y{0}'.format(k + 1)], yerr=D['2']['e_y{0}'.format(k + 1)],
+            print('(v,y,err) with index {0} have been correctly sorted on v'.format(k))
+        ax.errorbar(D['0']['v{0}'.format(k + 1)], D['1']['y{0}'.format(k + 1)], yerr=D['2']['e_y{0}'.format(k + 1)],
                     label=mV[k], elinewidth=2, linewidth=0.8)
         ax.grid(True, linestyle='--')
         ax.set_title(WorkDir.replace('./Characterization/Detectors/', '') + ' of ' + DetName, color='black')

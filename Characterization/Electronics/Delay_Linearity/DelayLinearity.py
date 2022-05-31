@@ -91,7 +91,7 @@ def FromCSVToDelay(CSV_Name, N, FileName):
     fit1.SetPoint(0, xi, yi)
     fit1.SetPoint(1, x0, y0)
     fit1.SetPoint(2, xf, yf)
-    f1 = ROOT.TF1('linear1', '[0]+[1]*x', xi, xf)
+    f1 = ROOT.TF1('linear1', '[0]+[1]*v', xi, xf)
     '''
     gr1.GetPoint(HalfRise1_index, x0, y0)
     fit1.SetPoint(0, x0, y0)
@@ -100,7 +100,7 @@ def FromCSVToDelay(CSV_Name, N, FileName):
         gr1.GetPoint(HalfRise1_index+j, xf, yf)
         fit1.SetPoint(2*j-1, xi, yi)
         fit1.SetPoint(2*j, xf, yf)
-    f1 = ROOT.TF1('FD1', '([0]/(exp([1]*(x-[2]))+1))+[3]', xi, xf)
+    f1 = ROOT.TF1('FD1', '([0]/(exp([1]*(v-[2]))+1))+[3]', xi, xf)
     f1.SetLineColor(ROOT.kRed)
     f1.SetLineWidth(1)
     '''
@@ -110,7 +110,7 @@ def FromCSVToDelay(CSV_Name, N, FileName):
     fit2.SetPoint(0, xi, yi)
     fit2.SetPoint(1, x0, y0)
     fit2.SetPoint(2, xf, yf)
-    f2 = ROOT.TF1('linear2', '[0]+[1]*x', xi, xf)
+    f2 = ROOT.TF1('linear2', '[0]+[1]*v', xi, xf)
     '''
     gr2.GetPoint(HalfRise1_index, x0, y0)
     fit2.SetPoint(0, x0, y0)
@@ -119,7 +119,7 @@ def FromCSVToDelay(CSV_Name, N, FileName):
         gr2.GetPoint(HalfRise2_index+j, xf, yf)
         fit2.SetPoint(2*j-1, xi, yi)
         fit2.SetPoint(2*j, xf, yf)
-    f2 = ROOT.TF1('FD2', '([0]/(exp([1]*(x-[2]))+1))+[3]', xi, xf)
+    f2 = ROOT.TF1('FD2', '([0]/(exp([1]*(v-[2]))+1))+[3]', xi, xf)
     f2.SetLineColor(ROOT.kBlue)
     f2.SetLineWidth(1)
     
@@ -196,7 +196,7 @@ if __name__ == '__main__':
         g.SetPointError(i, 0, y_err_list[i])
         i += 1
     
-    f = ROOT.TF1('linear', '[0]+[1]*x', min(x_list), max(x_list))
+    f = ROOT.TF1('linear', '[0]+[1]*v', min(x_list), max(x_list))
     f.SetParName(0, 'A')
     f.SetParName(1, 'B')
     

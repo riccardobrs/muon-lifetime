@@ -135,7 +135,7 @@ def parseXML(xmlsoup, rate, tfile_name, tfile_opt):
 if __name__ == '__main__':
     
     parser = argparse.ArgumentParser(description='Build .root output from .xml input -- default options can be modified')
-    parser.add_argument('-x', '--xml', dest='xmlName', help='.xml input file path (without extension)', default='./test', type=str)
+    parser.add_argument('-v', '--xml', dest='xmlName', help='.xml input file path (without extension)', default='./test', type=str)
     parser.add_argument('-r', '--rate', dest='rate', help='Digitizer sampling rate (in MHz)', default=250., type=float)
     args = parser.parse_args()
     

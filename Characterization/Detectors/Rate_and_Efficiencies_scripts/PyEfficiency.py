@@ -49,15 +49,15 @@ def DictFromArrayEfficiency(WorkDir, DetName):
                     Th3 = values[1]
                     Err3.append(sqrt(eff3 * (1 - eff3) / values[3]))
         i += 1
-    DictTh1 = {'x': X1,
+    DictTh1 = {'v': X1,
                'y': Y1,
                'th': Th1,
                'err': Err1}
-    DictTh2 = {'x': X2,
+    DictTh2 = {'v': X2,
                'y': Y2,
                'th': Th2,
                'err': Err2}
-    DictTh3 = {'x': X3,
+    DictTh3 = {'v': X3,
                'y': Y3,
                'th': Th3,
                'err': Err3}
@@ -134,21 +134,21 @@ def DictFromArrayThreshold(WorkDir, DetName):
             #j += 1
         i += 1
 
-    Dict0 = {'x': X0,
+    Dict0 = {'v': X0,
                'y': Y0}
-    Dict1 = {'x': X1,
+    Dict1 = {'v': X1,
                'y': Y1}
-    Dict2 = {'x': X2,
+    Dict2 = {'v': X2,
                'y': Y2}
-    Dict3 = {'x': X3,
+    Dict3 = {'v': X3,
              'y': Y3}
-    Dict4 = {'x': X4,
+    Dict4 = {'v': X4,
              'y': Y4}
-    Dict5 = {'x': X5,
+    Dict5 = {'v': X5,
              'y': Y5}
-    Dict6 = {'x': X6,
+    Dict6 = {'v': X6,
              'y': Y6}
-    Dict7 = {'x': X7,
+    Dict7 = {'v': X7,
              'y': Y7}
 
 
@@ -165,21 +165,21 @@ def DictFromArrayThreshold(WorkDir, DetName):
 
 
 def mkSublots(D, ax):
-    ax.errorbar(D['2']['x'], D['2']['y'], yerr = D['2']['err'], label=D['2']['th'], elinewidth = 2, linewidth = 0.5)
-    ax.errorbar(D['1']['x'], D['1']['y'], yerr = D['1']['err'], label=D['1']['th'], elinewidth = 2, linewidth = 0.5)
-    ax.errorbar(D['3']['x'], D['3']['y'], yerr = D['3']['err'], label=D['3']['th'], elinewidth = 2, linewidth = 0.5)
+    ax.errorbar(D['2']['v'], D['2']['y'], yerr = D['2']['err'], label=D['2']['th'], elinewidth = 2, linewidth = 0.5)
+    ax.errorbar(D['1']['v'], D['1']['y'], yerr = D['1']['err'], label=D['1']['th'], elinewidth = 2, linewidth = 0.5)
+    ax.errorbar(D['3']['v'], D['3']['y'], yerr = D['3']['err'], label=D['3']['th'], elinewidth = 2, linewidth = 0.5)
 
     return ax
 
 def mkSublotsTest(D, ax):
-    ax.plot(D['1']['x'], D['1']['y'], '-r.')
-    ax.plot(D['2']['x'], D['2']['y'], '-b.')
-    ax.plot(D['3']['x'], D['3']['y'], '-g.')
-    ax.plot(D['4']['x'], D['4']['y'], '-c.')
-    ax.plot(D['5']['x'], D['5']['y'], '-m.')
-    ax.plot(D['6']['x'], D['6']['y'], '-y.')
-    ax.plot(D['7']['x'], D['7']['y'], '-k.')
-    ax.plot(D['8']['x'], D['8']['y'], '-.', color='0.7')
+    ax.plot(D['1']['v'], D['1']['y'], '-r.')
+    ax.plot(D['2']['v'], D['2']['y'], '-b.')
+    ax.plot(D['3']['v'], D['3']['y'], '-g.')
+    ax.plot(D['4']['v'], D['4']['y'], '-c.')
+    ax.plot(D['5']['v'], D['5']['y'], '-m.')
+    ax.plot(D['6']['v'], D['6']['y'], '-y.')
+    ax.plot(D['7']['v'], D['7']['y'], '-k.')
+    ax.plot(D['8']['v'], D['8']['y'], '-.', color='0.7')
 
     return ax
 

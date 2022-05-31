@@ -152,7 +152,7 @@ def GenAllLatex(configFile):
             print 'latex_'+array_line[0]+'_'+array_line[1]+'.txt correctly created'
         i+=1
     
-#given a .txt input file with x values in column1 and count values in the other columns, readTxt function return the corresponding TGraphErrors
+#given a .txt input file with v values in column1 and count values in the other columns, readTxt function return the corresponding TGraphErrors
 def readTxt (fileName):
     
     gr = rt.TGraphErrors()
